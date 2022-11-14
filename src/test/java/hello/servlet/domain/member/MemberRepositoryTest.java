@@ -1,6 +1,5 @@
 package hello.servlet.domain.member;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,9 +23,12 @@ class MemberRepositoryTest {
 
         //when
         Member savedMember = memberRepository.save(member);
+        System.out.println("savedMember = " + savedMember);
 
         //then
         Member findMember = memberRepository.findById(savedMember.getId());
+        System.out.println("findMember = " + findMember);
+
         assertThat(findMember).isEqualTo(savedMember);
     }
 
@@ -41,6 +43,7 @@ class MemberRepositoryTest {
 
         //when
         List<Member> result = memberRepository.findAll();
+        System.out.println("result = " + result);
 
         //then
         assertThat(result.size()).isEqualTo(2);
