@@ -30,7 +30,6 @@ public class RequestParamController {
     /**
      * @param memberName
      * @param memberAge
-     * @return
      * @ResponsBody = @RestController 역할
      */
     @ResponseBody
